@@ -67,6 +67,17 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
+  gem 'database_cleaner'
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'rspec-rails'
 end
+
+# ffi
+gem 'ffi'
+
+# eager loading with Bullet
+gem 'bullet'
+
+gem 'devise'
+
