@@ -5,8 +5,7 @@ class CreateHotels < ActiveRecord::Migration[7.0]
       t.string :description
       t.integer :cost
       t.string :address
-      t.text :image
-      t.string :[]
+      t.string :image, array: true, default: []
 
       t.timestamps
     end
