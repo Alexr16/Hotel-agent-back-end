@@ -3,10 +3,10 @@ class CreateHotels < ActiveRecord::Migration[7.0]
     create_table :hotels do |t|
       t.string :name
       t.string :description
-      t.integer :cost
+      t.float :cost, default: 0.0
       t.string :address
       t.string :image, array: true, default: []
-      t.references :user, null: true, foreign_key: true 
+      t.references :user, null: false, foreign_key: true 
       t.timestamps
     end
   end

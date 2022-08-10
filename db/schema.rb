@@ -17,10 +17,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_10_202715) do
   create_table "hotels", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.integer "cost"
+    t.float "cost", default: 0.0
     t.string "address"
     t.string "image", default: [], array: true
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_hotels_on_user_id"
@@ -29,11 +29,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_10_202715) do
   create_table "reservations", force: :cascade do |t|
     t.string "city"
     t.date "date"
-    t.integer "number_of_days"
-    t.integer "number_of_rooms"
-    t.integer "number_of_guests"
-    t.bigint "user_id"
-    t.bigint "hotel_id"
+    t.integer "number_of_days", default: 0
+    t.integer "number_of_rooms", default: 0
+    t.integer "number_of_guests", default: 0
+    t.bigint "user_id", null: false
+    t.bigint "hotel_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["hotel_id"], name: "index_reservations_on_hotel_id"
