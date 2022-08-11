@@ -13,11 +13,11 @@
         description:"description #{@counter}",
         cost: @counter , address: "address #{@counter}",
         image: ["image #{@counter}","image #{@counter+1}"],
-    user_id:User.first.id)
+    user_id:User.first)
     Reservation.create(city: "city #{@counter}", 
         date: Date.new,
         number_of_days: @counter , number_of_rooms: @counter,
-        number_of_guests:@counter, user_id:User.first.id,
-    hotel_id: Hotel.first.id)
+        number_of_guests:@counter, user_id:User.first,
+    hotel_id: Hotel.first)
     @counter += 1
 end
