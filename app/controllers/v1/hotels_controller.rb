@@ -21,9 +21,13 @@ class V1::HotelsController < ApplicationController
         render json: hotel.errors, status: :unprocessable_entity
       end
     end
-
-    def most_recent
-      render json: Hotel.order(created_at: :desc).limit(10)
+    def destroy
+      @hotel = Hotel.find(params[:id])
+      if @hotel.destroy!
+        render json: {status: 201, message: 'Hotel removed successfully!', content: {hotel: @hotel}}
+      else
+        render json: {status: 401, message: 'Failed to remove!'}
+      end
     end
 
     private
