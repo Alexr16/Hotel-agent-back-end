@@ -1,18 +1,6 @@
 Rails.application.routes.draw do
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
-  
-  # devise_for :users,
-  #            controllers: {
-  #               #  sessions: 'users/sessions',
-  #                registrations: 'users/registrations'
-  #            }
-
-
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
 
   namespace :v1, defaults: { format: :json } do
     resources :most_recent, only: [:index]
@@ -25,10 +13,6 @@ Rails.application.routes.draw do
         delete '/auth/logout', to: 'authentication#logout'
         get '/*a', to: 'application#not_found'
         
-    #     devise_for :users
-    #  devise_scope :user do
-    # get '/users/sign_out' => 'devise/sessions#destroy'
-    # end
   end
 
 end
