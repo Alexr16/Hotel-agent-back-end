@@ -1,4 +1,7 @@
 class V1::ReservationsController < ApplicationController
+    # before_action :authenticate_user!
+    # skip_before_action :verify_authenticity_token
+    
     def index
         render json: Reservation.all
     end
@@ -19,14 +22,14 @@ class V1::ReservationsController < ApplicationController
         end
     end
 
-    def delete
+    def destroy
         reservation = Reservation.find(params[:id])
         reservation.destroy
-        render json: reservation
+        render json: { status: 201, message: 'Reservation deleted successfully!', content: { reservation: reservation } }
     end
 
     private
-    
+
     def reservation_params
         params.permit(
         :city,

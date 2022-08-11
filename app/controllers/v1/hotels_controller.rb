@@ -1,5 +1,8 @@
 class V1::HotelsController < ApplicationController
-
+    # skip_before_action :verify_authenticity_token
+    # before_action :authenticate_user!
+    
+    
     def index
       render json: Hotel.all
     end
@@ -17,6 +20,10 @@ class V1::HotelsController < ApplicationController
       else
         render json: hotel.errors, status: :unprocessable_entity
       end
+    end
+
+    def most_recent
+      render json: Hotel.order(created_at: :desc).limit(10)
     end
 
     private
