@@ -1,5 +1,4 @@
 class V1::MostRecentController < ApplicationController
-
   skip_before_action :authorize_request, only: :index
   skip_before_action :verify_authenticity_token
 

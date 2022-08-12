@@ -1,5 +1,4 @@
 class V1::HotelsController < ApplicationController
-
   def index
     render json: Hotel.all
   end
