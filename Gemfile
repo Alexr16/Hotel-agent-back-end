@@ -87,3 +87,5 @@ gem 'bullet'
 
 # for API documentation
 gem 'rswag'
+
+gem 'rake'
