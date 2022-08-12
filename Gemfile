@@ -76,7 +76,9 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
 
 # ffi
@@ -87,5 +89,3 @@ gem 'bullet'
 
 # for API documentation
 gem 'rswag'
-
-gem 'rake'
