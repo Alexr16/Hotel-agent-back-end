@@ -5,19 +5,38 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-@counter = 1
+# @counter = 1
 
-5.times do 
-    User.create(name: "user  #{@counter}") 
-    Hotel.create(name: "hotel #{@counter}", 
-        description:"description #{@counter}",
-        cost: @counter , address: "address #{@counter}",
-        image: ["image #{@counter}","image #{@counter+1}"],
-    user_id:User.first)
-    Reservation.create(city: "city #{@counter}", 
-        date: Date.new,
-        number_of_days: @counter , number_of_rooms: @counter,
-        number_of_guests:@counter, user_id:User.first,
-    hotel_id: Hotel.first)
-    @counter += 1
-end
+# 5.times do 
+#     User.create(name: "user  #{@counter}") 
+#     Hotel.create(name: "hotel #{@counter}", 
+#         description:"description #{@counter}",
+#         cost: @counter , address: "address #{@counter}",
+#         image: ["image #{@counter}","image #{@counter+1}"],
+#     user_id:User.first)
+#     Reservation.create(city: "city #{@counter}", 
+#         date: Date.new,
+#         number_of_days: @counter , number_of_rooms: @counter,
+#         number_of_guests:@counter, user_id:User.first,
+#     hotel_id: Hotel.first)
+#     @counter += 1
+# end
+#Users
+user1 = User.create(name: "Admin", email: "admin@hotmail.com", password: "123456")
+user2 = User.create(name: "User", email: "user@hotmail.com", password: "123456")
+
+#Hotels
+hotel1 = Hotel.create(name: "InterContinental Miami", description: "This property is 20 minutes walk from the beach. With views of the Biscayne Bay, InterContinental Miami is set in Miami’s business district. The Port of Miami is 6 minutes’ drive from this luxury hotel.", cost: 537.0, address: "100 Chopin Plaza, Miami, FL 33131, United States", image: ["https://unsplash.com/photos/ndUyfdqbCq4","https://unsplash.com/photos/oBIf4j2IMs8","https://unsplash.com/photos/07lWC8Xf8bY"], user_id: user1.id)
+hotel2 = Hotel.create(name: "Days Inn by Wyndham Miami", description: "This Days Inn features free WiFi, a flat-screen cable TV and small refrigerator are provided in all rooms of the Days Inn Miami International Airport. A coffee maker, work desk and ironing facilities are included.", cost: 236.0, address: "7250 North West 11th Street, Miami, FL 33126, United States", image: ["https://unsplash.com/photos/34XVzqRHEBs","https://unsplash.com/photos/vRkrkVg2aEw", "https://unsplash.com/photos/WJRkIVjLg68"], user_id: user1.id)
+hotel3 = Hotel.create(name: "Paradisus Palma Rea", description: "This property is 13 minutes walk from the beach. Located in Punta Cana, this impressive resort has direct access to a private beach area. There is a large outdoor pool with waterslides, as well as an extensive spa, available for an extra cost.", cost: 929.0, address: "Playa de Bavaro, Bavaro, 23301 Punta Cana, Dominican Republic", image: ["https://unsplash.com/photos/CepDpEiALqM","https://unsplash.com/photos/vmIWr0NnpCQ", "https://unsplash.com/photos/u-Di0zMI4xI"], user_id: user1.id)
+hotel4 = Hotel.create(name: "Caribbean Dream STUDIOS", description: "This property is 1 minute walk from the beach. Offering pool views, Caribbean Dream STUDIOS Playa LOS CORALES - Pool Beach Club & SPA in Punta Cana offers accommodation, a restaurant, an outdoor swimming pool, a bar, a garden and a private beach area. The aparthotel features both WiFi and private parking free of charge.", cost: 171.0, address: "Villas Los Corales, Calle Residencial Los Corales, Punta Cana 23000, Bavaro, 23000 Punta Cana, Dominican Republic", image: ["https://unsplash.com/photos/0sSJMTfLXUI","https://unsplash.com/photos/7QOUxaHM2VU", "https://unsplash.com/photos/VGzsMSAKARg"], user_id: user1.id)
+hotel5 = Hotel.create(name: "Native Manchester", description: "Native Manchester is great for groups who want to book apartments that connect via a private outer hallway or interconnecting apartments that are adjoined by a two-way door in the living room. Some of the bedrooms even have zip and link beds to create a twin room.", cost: 457.0, address: "51 Ducie Street, Piccadilly, Manchester, M1 2TP, United Kingdom", image: ["https://unsplash.com/photos/pdi5rd7FwaA","https://unsplash.com/photos/g5ZIXjzRGds", "https://unsplash.com/photos/aRT5UCf2MYY"], user_id: user1.id)
+hotel6 = Hotel.create(name: "Llandudno Bay Hotel", description: "This property is 1 minute walk from the beach. Overlooking the picturesque promenade, the Llandudno Bay Hotel provides views to overlook, and modern interior to enjoy. The Llandudno Bay Hotel is dog friendly and feature modern rooms. A restaurant and a bar are available, perfect for any occasion.", cost: 436.0, address: "East Parade, Llandudno, LL30 1BE, United Kingdom", image: ["https://unsplash.com/photos/ACz1L2FMucI","https://unsplash.com/photos/602Ig3lO82U", "https://unsplash.com/photos/JMWqAmRnXUg"], user_id: user1.id)
+hotel7 = Hotel.create(name: "Jodha Bai Retreat", description: "Situated in Terranora, 10 km from Fingal Head Lighthouse, Jodha Bai Retreat features accommodation with a bar, free private parking, a garden and barbecue facilities. Each accommodation at the 5-star hotel has river views, and guests can enjoy access to a sun terrace and to a hot tub. The accommodation offers a 24-hour front desk, airport transfers, room service and free WiFi.", cost: 355.0, address: "38 Sunnycrest Drive, NSW 2486 Terranora, Australia", image: ["https://unsplash.com/photos/KTf3s4Fcv00","https://unsplash.com/photos/6sibbIJMRFE", "https://unsplash.com/photos/yn3tA00iHBg"], user_id: user1.id)
+hotel8 = Hotel.create(name: "Lancemore Crossley St. Melbourne", description: "Situated in Melbourne and with Princess Theatre reachable within 300 metres, Lancemore Crossley St. Melbourne features express check-in and check-out, non-smoking rooms, a fitness centre, free WiFi throughout the property and a bar. Boasting family rooms, this property also provides guests with a terrace. The accommodation offers a 24-hour front desk, room service and organising tours for guests.", cost: 198.0, address: "51 Little Bourke Street, 3000 Melbourne, Australia", image: ["https://unsplash.com/photos/KVXxBwIu8Vw","https://unsplash.com/photos/1H30uRC1plc", "https://unsplash.com/photos/bJ3hfPg2Rhc"], user_id: user1.id)
+hotel9 = Hotel.create(name: "Sofitel Barú Calablanca", description: "Set in Cartagena de Indias, Sofitel Barú Calablanca offers beachfront accommodation 2.5 km from Playa Blanca and offers various facilities, such as a restaurant, a bar and a garden. This 5-star hotel offers room service, a kids' club and free WiFi. The hotel features an outdoor swimming pool, fitness centre, evening entertainment and a 24-hour front desk.", cost: 290.0, address: " KM 7 Sector Portonao Departamento Bolivar Baru, 130017 Cartagena de Indias, Colombia", image: ["https://unsplash.com/photos/fV2dM2WvKvE","https://unsplash.com/photos/SOY3p0HrVJA", "https://unsplash.com/photos/NpjE6Q69RgI"], user_id: user1.id)
+hotel10 = Hotel.create(name: "Melia Cartagena Karmairi", description: "This property is 12 minutes walk from the beach. Situated in Cartagena de Indias, 200 m from Manzanillo Beach, Melia Cartagena Karmairi features accommodation with a restaurant, free private parking, an outdoor swimming pool and a fitness centre. Among the various facilities are a bar, a garden, as well as a private beach area. The accommodation provides a 24-hour front desk, a shuttle service, room service and free WiFi throughout the property.", cost: 117.0, address: "Km 3 Vía Manzanillo del Mar Km 3 Vía Manzanillo del Mar, Manzanillo, 130001 Cartagena de Indias, Colombia", image: ["https://unsplash.com/photos/CepDpEiALqM","https://unsplash.com/photos/1tyuLfDOnG0", "https://unsplash.com/photos/2gOxKj594nM"], user_id: user1.id)
+hotel11 = Hotel.create(name: "Carlton City Hotel Singapore", description: "Situated in the historical district of Tanjong Pagar, Carlton City Hotel Singapore is a short drive from colourful Chinatown and Raffles Place. The hotel boasts an outdoor swimming pool and a sundeck. Guests can enjoy meals at the in-house restaurant or have a drink at the bar. Free WiFi is available throughout the property.", cost: 211.0, address: "1 Gopeng Street, Chinatown, 078862 Singapore, Singapore", image: ["https://unsplash.com/photos/ZFXrgzHu1KU","https://unsplash.com/photos/a8iCZvtrHpQ", "https://unsplash.com/photos/FqqiAvJejto"], user_id: user1.id)
+
+#Reservations
+# reservation1 = Reservation.create(city: "city 1", date: Date.new, number_of_days: 1, number_of_rooms: 1, number_of_guests: 1, user_id: user2.id, hotel_id: hotel1.id)

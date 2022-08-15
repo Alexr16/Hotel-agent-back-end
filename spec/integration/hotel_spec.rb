@@ -15,7 +15,7 @@ describe 'Hotel Agent API Docs', type: :request do
     Rails.application.reload_routes!
   end
 
-    path '/auth/login' do
+    path '/v1/auth/login' do
       post 'Login' do
         tags 'Authentication'
         consumes 'application/json'
@@ -33,7 +33,7 @@ describe 'Hotel Agent API Docs', type: :request do
         end
       end
     end
-    path '/auth/logout' do
+    path '/v1/auth/logout' do
       delete 'Logout' do
         tags 'Authentication'
         consumes 'application/json'
