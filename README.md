@@ -10,11 +10,11 @@ This is the back-end API for HotelAgent, an app in which you can reserve a hotel
 
 The API has endpoints for users/reservations/hotels.
 
-Read the complete documentation [here](https://project-name.herokuapp.com/api-docs/index.html).
+Read the complete documentation [here](https://mysterious-anchorage-43373.herokuapp.com/api-docs/index.html).
 
 ## UI Repo
 
-Check the UI of this App [here]().
+Check the UI of this App [here](https://github.com/ahmedadel56/hotel-agent-front-end).
 
 
 ## Built With
@@ -34,6 +34,7 @@ To get a local copy up and running follow these simple example steps.
 - Make sure that your PostgreSQL server is running and that you can establish a connection with the database.
 - Execute `rails db:create` to create the database.
 - Execute `rails db:migrate` to migrate the database.
+- Execute `rails db:seed` to migrate the database.
 - Run `rails s` to run the application.
 
 
@@ -49,10 +50,10 @@ To get a local copy up and running follow these simple example steps.
 
 [Live UI]()
 
-Admin Account for Demo/testing: admin@admin.com (password: 123456)
+Admin Account for Demo/testing: admin@hotmail.com (password: 123456)
 
 
-[API Link]()
+[API Link](https://mysterious-anchorage-43373.herokuapp.com/v1/most_recent)
 
 ## Kanban Board
 
