@@ -10,7 +10,7 @@ This is the back-end API for HotelAgent, an app in which you can reserve a hotel
 
 The API has endpoints for users/reservations/hotels.
 
-Read the complete documentation [here](https://mysterious-anchorage-43373.herokuapp.com/api-docs/index.html).
+Read the complete documentation [here](https://infinite-falls-52470.herokuapp.com/api-docs/index.html).
 
 ## UI Repo
 
@@ -53,7 +53,7 @@ To get a local copy up and running follow these simple example steps.
 Admin Account for Demo/testing: admin@hotmail.com (password: 123456)
 
 
-[API Link](https://mysterious-anchorage-43373.herokuapp.com/v1/most_recent)
+[API Link](https://infinite-falls-52470.herokuapp.com/v1/most_recent)
 
 ## Kanban Board
 
