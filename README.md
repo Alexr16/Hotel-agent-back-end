@@ -63,7 +63,7 @@ Check out the backend(API) kanban board: https://github.com/users/Alexr16/projec
 
 This was the kanban board a the beginning of the project
 
-![Start_kanban_board](https://user-images.githubusercontent.com/43178495/184255416-035fd299-27a8-413f-918e-9fefdb4e0a38.png)
+![Start_kanban_board](https://user-images.githubusercontent.com/95060298/183961648-724a294f-a3f0-40bb-a37a-c89e3bde5375.png)
 
 ## Authors
 
