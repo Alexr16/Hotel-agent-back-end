@@ -29,6 +29,7 @@ describe 'Hotel Agent API Docs', type: :request do
         }
         response '201', 'User login successfully!' do
           let(:user) { { email: @user.email, password: @user.password } }
+          # run_test!
         end
       end
     end
@@ -49,6 +50,7 @@ describe 'Hotel Agent API Docs', type: :request do
         parameter name: :hotel, in: :body
         response '200', 'Success' do
           let(:hotel) { Hotel.order(created_at: :desc).limit(10) }
+          # run_test!
         end
       end
     end
@@ -67,6 +69,7 @@ describe 'Hotel Agent API Docs', type: :request do
         }
         response '201', 'User created successfully!' do
           let(:user) { { name: @user.name, email: @user.email, password: @user.password } }
+          run_test!
         end
       end
     end
@@ -78,6 +81,7 @@ describe 'Hotel Agent API Docs', type: :request do
         parameter name: :hotel, in: :body
         response '201', 'Success!' do
           let(:hotel) { Hotel.all }
+          # run_test!
         end
       end
     end
@@ -89,6 +93,7 @@ describe 'Hotel Agent API Docs', type: :request do
         parameter name: :hotel, in: :body
         response '201', 'Success!' do
           let(:hotel) { Hotel.find(params[:id]) }
+          # run_test!
         end
       end
     end
@@ -113,6 +118,7 @@ describe 'Hotel Agent API Docs', type: :request do
               cost: @hotel.cost, address: @hotel.address, image: @hotel.image,
               user_id: @user.id }
           end
+          # run_test!
         end
       end
     end
@@ -124,6 +130,7 @@ describe 'Hotel Agent API Docs', type: :request do
         parameter name: :hotel, in: :body
         response '201', 'Hotel removed Successfully!' do
           let(:hotel) { Hotel.find(params[:id]).destroy! }
+          # run_test!
         end
       end
     end
@@ -137,6 +144,7 @@ describe 'Hotel Agent API Docs', type: :request do
         parameter name: :reservation, in: :body
         response '201', 'Success!' do
           let(:reservation) { Reservation.all }
+          # run_test!
         end
       end
     end
@@ -162,6 +170,7 @@ describe 'Hotel Agent API Docs', type: :request do
               number_of_days: @reservation.number_of_days, number_of_guests: @reservation.number_of_guests,
               number_of_rooms: @reservation.number_of_rooms, hotel_id: @hotel.id, user_id: @user.id }
           end
+          # run_test!
         end
       end
     end
@@ -173,6 +182,7 @@ describe 'Hotel Agent API Docs', type: :request do
         parameter name: :hotel, in: :body
         response '201', 'Hotel removed Successfully!' do
           let(:reservation) { Reservation.find(params[:id]).destroy! }
+          # run_test!
         end
       end
     end

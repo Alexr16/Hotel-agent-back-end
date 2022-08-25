@@ -4,7 +4,7 @@ info:
   title: API V1
   version: v1
 paths:
-  "/auth/login":
+  "/v1/auth/login":
     post:
       summary: Login
       tags:
@@ -23,14 +23,6 @@ paths:
                   type: string
                 password:
                   type: string
-  "/auth/logout":
-    delete:
-      summary: Logout
-      tags:
-      - Authentication
-      responses:
-        '200':
-          description: User logout successfully!
   "/v1/most_recent":
     get:
       summary: Most Recent Hotels
