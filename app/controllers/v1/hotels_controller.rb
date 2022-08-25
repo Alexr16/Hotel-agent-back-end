@@ -35,7 +35,7 @@ class V1::HotelsController < ApplicationController
       :description,
       :cost,
       :address,
-      :image
+      image: []
     )
   end
 end
